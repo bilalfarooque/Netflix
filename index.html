@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,53 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <img id="logo" src="./images/logo.png" alt="logo">
+            <div id="signIn">
+                <button>Sign In</button>
+            </div>
+        </nav>
+        <div class="header-hero">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h3>Watch anywhere. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <form class="email-signup" action="">
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <button type="submit">Get Started <img src="./images/right-arrow.png" alt="rightarrow"
+                        width="12px"></button>
+            </form>
+        </div>
+
+
+
+    </header>
+
+    <div class="spacer"></div>
+
+    <section>
+        <div class="features">
+            <div class="row">
+                <div class="text-col">
+                    <h2>Enjoy on your TV</h2>
+                    <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div class="img-col">
+                    <img src="./images/tv.png" alt="tv">
+                    <div class="motion">
+                        <video src="./images/video-tv-0819.m4v" preload="auto" autoplay></video>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./app.js"></script>
 </body>
+
 </html>
