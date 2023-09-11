@@ -70,10 +70,11 @@ nav {
   line-height: 50px;
 }
 
-.header-hero p {
+.email-signup-top {
   font-size: 18px;
   font-weight: 400;
   line-height: 50px;
+  text-align: center;
 }
 
 .email-signup {
@@ -81,6 +82,7 @@ nav {
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .email-signup input {
@@ -153,17 +155,17 @@ nav {
 }
 
 .img-col .motion video {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 66%;
+  height: 95%;
+  z-index: -1;
 }
 
 .img-col .motion {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 80%;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .img-col img#download-icon {
@@ -176,19 +178,22 @@ nav {
 /* features ends here  */
 .faq {
   padding: 10px 12%;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
+  width: 100%;
 }
 
 .faq h2 {
-  font-size: 40px;
-  font-weight: 500;
+  text-align: center;
+  margin: 50px 0 20px 0;
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .accordion {
-  margin: 60px auto;
   width: 100%;
-  max-width: 750px;
+  overflow-wrap: normal;
+  margin-bottom: 35px;
 }
 
 .accordion li {
@@ -200,8 +205,8 @@ nav {
 .accordion li label {
   display: flex;
   align-items: center;
-  padding: 20px;
-  font-size: 18px;
+  padding: 24px;
+  font-size: 24px;
   font-weight: 500;
   background: #303030;
   margin-bottom: 2px;
@@ -209,40 +214,138 @@ nav {
   position: relative;
 }
 
-label::after{
-    content: '+';
-    font-size: 34px;
-    position: absolute;
-    left: 94%;
-    transition: transform 0.1s;
+label::after {
+  content: "+";
+  font-size: 44px;
+  position: absolute;
+  left: 94%;
+  transition: transform 0.1s;
 }
 
-input[type="radio"]{
-    display: none;
+input[type="radio"] {
+  display: none;
 }
 
-.accordion .accordion-content{
-    background: #303030;
-    text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all ease-in-out 0.4s;
-
+.accordion .accordion-content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.4s;
 }
-.accordion-content p{
-line-height: 30px;
-}
-
-.accordion-content p:nth-child(1){
-    margin-bottom: 20px;
+.accordion-content p {
+  line-height: 30px;
 }
 
-.accordion input[type="radio"]:checked + label + .accordion-content{
-    max-height: 600px;
-    padding: 30px 20px;
+.accordion-content p:nth-child(1) {
+  margin-bottom: 20px;
 }
 
-.accordion input[type="radio"]:checked + label::after{
-    transform: rotate(135deg);
+.accordion input[type="radio"]:checked + label + .accordion-content {
+  max-height: 600px;
+  padding: 30px 20px;
 }
+
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+/*  accordion ends here */
+
+.footerlinks {
+  width: 75%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.footer-head{
+  margin-top: 60px;
+}
+
+.footer-head a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 200;
+  padding: 12px  0;
+}
+
+.linkList {
+  align-self: center;
+  margin: auto;
+  width: 100%;
+}
+
+ul.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    auto
+  ); /* 5 columns with 1fr equal width space relative to div width*/
+  grid-template-rows: repeat(
+    5,
+    1fr
+  ); /* 3 rows, 'auto' to adjust to content height */
+  gap: auto; /* Adjust the gap between items as needed */
+  row-gap: 10px;
+  margin-bottom: 40px;
+}
+
+.linkList ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 30px 0;
+  /* Remove default margin */
+}
+
+.linkList li {
+  text-align: left; /* Center the content horizontally */
+}
+
+.linkList li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.language{
+  display: inline-block;
+  width: 100%;
+  max-width: 126px;
+  max-height: 32px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.lang-items{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  border: 0.1px solid grey;
+  border-radius: 6px;
+  padding: 2px 10px;
+}
+
+.language select{
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+
+}
+
+.language select:focus {
+  min-width: 80px;
+  width: auto;
+}
+
+.location p{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+
