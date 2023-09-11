@@ -12,13 +12,12 @@ body {
 
 header {
   width: 100%;
-  height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(./images/header-image.png);
   background-size: cover;
   background-position: center;
   padding: 10px 8%;
-  position: relative;
+  height: 90vh;
 }
 
 nav {
@@ -49,29 +48,27 @@ nav {
   background-color: #bd0912;
 }
 
-.header-hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.header-hero{
+  margin-top: 25vh;
+}
+
+
+.header-hero h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 70px;
   text-align: center;
 }
 
-.header-hero h1 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 70px;
-  max-width: 650px;
-}
-
 .header-hero h3 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 50px;
+  text-align: center;
 }
 
 .email-signup-top {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 50px;
   text-align: center;
@@ -81,17 +78,36 @@ nav {
   border-radius: 4px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  margin: auto;
   margin-bottom: 50px;
+  width: 150px;
+  justify-content: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+
 }
 
-.email-signup input {
-  flex: 1; /*the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space */
+.email-signup input{
+  /* flex: 1;  */
+  /* the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space */
   border: 0.2 solid grey;
-  border-radius: 4px;
+  border-radius: 6px;
   outline: none;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 7px 20px;
+  padding: 18px 10px;
+  color: white;
+  width: 400px;
+}
+
+.email-signup input::placeholder{
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.email-input{
+  transition: all 0.3s ease;
 }
 
 .email-signup button {
@@ -99,12 +115,19 @@ nav {
   color: #fff;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 600;
   cursor: pointer;
-  padding: 7px 30px;
+  padding: 15px 24px;
   margin-left: 5px;
   border-radius: 4px;
+  min-width: 180px;
 }
+
+.email-signup button img{
+  color: white;
+
+} 
 
 .email-signup button:hover {
   background-color: #bd0912;
@@ -181,7 +204,16 @@ nav {
   text-align: left;
   font-size: 18px;
   width: 100%;
-}
+  /* position: relative; */
+} 
+
+/* .faq .email-signup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+} */
 
 .faq h2 {
   text-align: center;
