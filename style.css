@@ -513,7 +513,7 @@ ul.footerGrid {
 }
 
 /*large screen desktops  */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width:1200px) {
   * {
     box-sizing: border-box;
     margin: 0;
@@ -593,28 +593,22 @@ ul.footerGrid {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    /* overflow: hidden; */
-    margin: auto;
-    margin-bottom: 50px;
-    width: 150px;
+    width: 90%;
+    margin: 20px auto;
     justify-content: center;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
   }
-
+  
+  .email-input {
+    margin-top: 0;
+    width: 50%;
+    transition: all 0.3s ease;
+  }
+  
   .email-signup input {
-    border: 0.2 solid grey;
-    border-radius: 6px;
-    outline: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 18px 10px;
+    padding: 18px 8px;
     color: white;
-    width: 400px;
-  }
-
-  .email-signup input::placeholder {
-    font-size: 16px;
-    font-weight: 600;
+    width: 95%;
   }
 
   .email-input {
@@ -812,14 +806,10 @@ ul.footerGrid {
 
   ul.footerGrid {
     display: grid;
-    grid-template-columns: repeat(
-      3,
-      auto
-    ); /* 5 columns with 1fr equal width space relative to div width*/
-    grid-template-rows: repeat(
-      5,
-      1fr
-    ); /* 3 rows, 'auto' to adjust to content height */
+    grid-template-columns: repeat(3,auto); 
+    /*  columns with 1fr equal width space relative to div width*/
+    grid-template-rows: repeat(5,1fr); 
+    /* 5 rows, 'auto' to adjust to content height */
     gap: auto; /* Adjust the gap between items as needed */
     row-gap: 10px;
     margin-bottom: 40px;
